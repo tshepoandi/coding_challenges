@@ -19,3 +19,6 @@ def pig_it(text)
       .join(" ")
   )
 end
+
+puts pig_it("hELLO EARTH!")
+puts pig_it("this is pig latin")
