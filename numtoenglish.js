@@ -3,16 +3,25 @@
 // https://www.codewars.com/kata/5463c8db865001c1710003b2/train/javascript
 
 const numberToEnglish = n => {
-  //your code here
     dictionary = {
-        4:"thousand",
+        singles:["one","two","three","four","five","six","seven","eight","nine"],
+        lessThanTwenty:["eleven","twelve","thirteen","forteen","fifteen","sixteen","seventeen","eighteen","nineteen"],
+        2:["ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"],      
         3:"hundred",
-        2:["ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"],
-        1:["one","two","three","four","five","six","seven","eight","nine"]
+        4:"thousand",
     }
-
-    let number = n.toString()
-    return `${dictionary[1][parseInt(number[0]) -1]} ${dictionary[number.length]}`
+    let number = n.toString().split("")
+    let numberLength = number.length
+    const numArr = []
+    for (let i = 0;i < number.length;i++){
+        numberLength -= 1
+        numArr.push(number[i] + "0".repeat(numberLength))
+        // if numArr.push(dictionary)
+    }
+    // let ans;
+  
+    // return ans
 }
 
 console.log(numberToEnglish(540))
+console.log(numberToEnglish(23))
