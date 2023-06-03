@@ -6,7 +6,6 @@ function isPangram(string){
         letter = letter.toLowerCase()
         ind = alphabets.indexOf(letter)
         if (ind !== -1){
-
             alphabets.splice(ind,1)
         }
     })
@@ -20,7 +19,7 @@ function isPangram(string){
 // console.log(isPangram("The quick brown fox jumps over the lazy dog"))
 // console.log(isPangram("Cwm fjord bank glyphs vext quiz"))
 // console.log(isPangram("Pack my box with five dozen liquor jugs."))
-console.log(isPangram("How quickly daft jumping zebras vex"))
+// console.log(isPangram("How quickly daft jumping zebras vex"))
 // const array = [2, 5, 9];
 
 // console.log(array);
