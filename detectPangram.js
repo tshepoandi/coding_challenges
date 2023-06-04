@@ -9,17 +9,17 @@ function isPangram(string){
             alphabets.splice(ind,1)
         }
     })
-    console.log(alphabets)
+    // console.log(alphabets)
     if (alphabets.length == 0){
         return true
     }
     return false
 }
 
-// console.log(isPangram("The quick brown fox jumps over the lazy dog"))
-// console.log(isPangram("Cwm fjord bank glyphs vext quiz"))
-// console.log(isPangram("Pack my box with five dozen liquor jugs."))
-// console.log(isPangram("How quickly daft jumping zebras vex"))
+console.log(isPangram("The quick brown fox jumps over the lazy dog"))
+console.log(isPangram("Cwm fjord bank glyphs vext quiz"))
+console.log(isPangram("Pack my box with five dozen liquor jugs."))
+console.log(isPangram("How quickly daft jumping zebras vex"))
 // const array = [2, 5, 9];
 
 // console.log(array);
