@@ -45,27 +45,35 @@
 
 
 // // Soulution2
-
+// 
 // //  do 000 000 000 000 
-
+// 
 const numberToEnglish = n => {
     dictionary = {
         singles:["zero","one","two","three","four","five","six","seven","eight","nine"],
         lessThanTwenty:["eleven","twelve","thirteen","forteen","fifteen","sixteen","seventeen","eighteen","nineteen"],
         tens:["ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"], 
         0:"zero",
-        1:"one",
-        2:"two",     
-        3:["","hundred"],
-        4:["","thousand"],
-        5:["","million"]
+        1:["single",0],
+        2:["ten",00],     
+        3:["hundred",000],
+        4:["thousand",0000],
+        5:["ten thousand",00000],
+        6:["hundred thousand",000000]
     }
 
     let number = n.toString()
-    // if(number.length <= 3 ) return dictionary[3]
-    // if(number.length >= 4 && number.length <= 6) return dictionary[4]
-    // if(number.length > 6) return dictionary[5] 
-    // return answer
+    let len = number.length
+    const answer = []
+    // console.log(number)
+    for (let i = 0; i < number.length;i++){
+        len -= 1
+        if(number[0] !== "0") {
+            answer.push(number[i] + "0".repeat(len))
+        }
+    }
+    return answer
+    return answer
     
 }
 console.log(numberToEnglish(50))
