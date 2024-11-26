@@ -17,7 +17,7 @@ def pyramid(number)
 end
 
 
-
+pyramid(8)
 
 
 #    make a loop
